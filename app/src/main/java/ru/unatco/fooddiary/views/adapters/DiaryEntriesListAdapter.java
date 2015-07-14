@@ -15,7 +15,7 @@ import ru.unatco.fooddiary.data.models.DiaryEntry;
 
 public class DiaryEntriesListAdapter extends BaseAdapter {
 
-    private static class ViewHolder {
+    class ViewHolder {
         @Bind(R.id.date)
         TextView mDate;
         @Bind(R.id.note)
