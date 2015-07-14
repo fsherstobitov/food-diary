@@ -10,7 +10,9 @@ public class DiaryEntry {
     private List<Product> mChildProducts;
     private List<Product> mMotherProducts;
 
-    public DiaryEntry() {}
+    public DiaryEntry() {
+        mDate = new Date();
+    }
 
     public DiaryEntry(String id, Date date, String note, List<Product> childProducts, List<Product> motherProducts) {
         mId = id;
