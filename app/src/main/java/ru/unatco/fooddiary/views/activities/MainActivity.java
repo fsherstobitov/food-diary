@@ -2,12 +2,17 @@ package ru.unatco.fooddiary.views.activities;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import ru.unatco.fooddiary.R;
+import java.util.List;
 
-public class MainActivity extends ActionBarActivity {
+import ru.unatco.fooddiary.R;
+import ru.unatco.fooddiary.data.models.DiaryEntry;
+import ru.unatco.fooddiary.views.MainView;
+
+public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +40,20 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void showLoadProgress() {
+
+    }
+
+    @Override
+    public void showEnties(List<DiaryEntry> entries) {
+
+    }
+
+    @Override
+    public void showErrorMessage() {
+
     }
 }
