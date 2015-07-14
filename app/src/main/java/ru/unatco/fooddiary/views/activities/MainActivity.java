@@ -1,23 +1,36 @@
 package ru.unatco.fooddiary.views.activities;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import ru.unatco.fooddiary.R;
 import ru.unatco.fooddiary.data.models.DiaryEntry;
 import ru.unatco.fooddiary.views.MainView;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+    @Bind(android.R.id.list)
+    ListView mListView;
+    @Bind(android.R.id.progress)
+    ProgressBar mProgressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        mToolbar.setTitle(R.string.app_name);
     }
 
     @Override
