@@ -7,7 +7,7 @@ import ru.unatco.fooddiary.data.models.DiaryEntry;
 public interface MainView {
     void showLoadProgress();
 
-    void showEnties(List<DiaryEntry> entries);
+    void showEntries(List<DiaryEntry> entries);
 
     void showErrorMessage();
 }

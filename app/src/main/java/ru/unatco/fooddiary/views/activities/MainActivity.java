@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
-    public void showEnties(List<DiaryEntry> entries) {
+    public void showEntries(List<DiaryEntry> entries) {
 
     }
 
